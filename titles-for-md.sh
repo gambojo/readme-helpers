@@ -26,7 +26,7 @@ setLevel() {
 }
 
 setIdent() {
-    __level__="$@"
+    __level__="${@}"
     printf '%*s' $((__level__-2)) ''
 }
 
