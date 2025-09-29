@@ -48,4 +48,4 @@ main() {
     done <<< $(readLine "${@}")
 }
 
-main "$@"
+main "${@}"
