@@ -45,7 +45,7 @@ main() {
         level=$(setLevel ${line})
         ident=$(setIdent ${level})
         formatter "${ident}" "${title}" "${anchor}"
-    done <<< $(readLine "$@")
+    done <<< $(readLine "${@}")
 }
 
 main "$@"
