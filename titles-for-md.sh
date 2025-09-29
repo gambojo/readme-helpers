@@ -31,7 +31,7 @@ setIdent() {
     printf '%*s' $((__level__-2)) ''
 }
 
-formatter() {
+setFormat() {
     __indent__="${1}"
     __title__="${2}"
     __anchor__="${3}"
@@ -44,7 +44,7 @@ main() {
         anchor=$(setAnchor ${title})
         level=$(setLevel ${line})
         ident=$(setIdent ${level})
-        formatter "${ident}" "${title}" "${anchor}"
+        setFormat "${ident}" "${title}" "${anchor}"
     done <<< $(readLine "${@}")
 }
 
