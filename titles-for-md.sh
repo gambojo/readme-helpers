@@ -2,9 +2,9 @@
 set -e
 
 readLine() {
-    __maxdepth__="${MAXDEPTH}"
+    __maxdepth__="${MAXDEPTH-3}"
     __fileName__="${1}"
-    sed -n '/^#\{1,'${__maxdepth__-3}'\}[^#]/p' "${__fileName__}"
+    sed -n '/^#\{1,'${__maxdepth__}'\}[^#]/p' "${__fileName__}"
 }
 
 setTitle() {
