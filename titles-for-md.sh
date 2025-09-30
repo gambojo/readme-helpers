@@ -40,7 +40,7 @@ setFormat() {
 
 main() {
     if [[ -z ${@} ]]; then
-        printf '%s\n' "Required argument: mark down file path"
+        printf '%s\n' "ERROR: Required argument: mark down file path"
         exit 1
     fi
 
