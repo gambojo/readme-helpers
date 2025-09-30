@@ -2,6 +2,10 @@
 set -e
 
 readLine() {
+    if [[ -z ${1} ]]; then
+        printf '%s\n' "Required argument: mark down file path"
+        exit 1
+    fi
     __maxDepth__="${MAXDEPTH-3}"
     __fileName__="${1}"
     sed -n '/^#\{1,'${__maxDepth__}'\}[^#]/p' "${__fileName__}"
