@@ -1,5 +1,6 @@
 #! /usr/bin/env bash
-set -e
+
+set -euo pipefail
 
 readLine() {
     local __maxDepth__="${MAXDEPTH-3}"
